@@ -4,6 +4,11 @@ This project builds a model for an API that classifies disaster messages from a 
 
 ## Project Instructions
 #### 1. Clone Project and Install requirements 
+```
+git clone https://github.com/franciscoj-londonoh/Disaster-Response-Pipeline.git
+cd Disaster-Response-Pipeline
+pip install -r requirements.txt
+```
 
 #### 2. Run the following commands in the project's root directory to set up the database and model:
 
