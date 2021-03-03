@@ -21,10 +21,14 @@ pip install -r requirements.txt
     `python run.py`
 
 #### 4. Go to http://0.0.0.0:3001/
+The initial webpage shows three descriptive graphs about the used data set. In here, the user can then write a message in the input bar and click on the "Classify Message" button.
+![Web1](https://github.com/franciscoj-londonoh/Disaster-Response-Pipeline/blob/main/Images/Web1.jpg)
 
+The results of the message classification are then displays as shown below: 
+![Web2](https://github.com/franciscoj-londonoh/Disaster-Response-Pipeline/blob/main/Images/Web2.jpg)
 
 ## Project Components
-There are three components you'll need to complete for this project.
+The project is structured in three components:
 
 ## 1. ETL Pipeline
 The Python script process_data.py presents a data cleaning pipeline that:
