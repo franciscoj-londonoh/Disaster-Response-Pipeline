@@ -1,4 +1,21 @@
 # Disaster-Response-Pipeline
+This project builds a model for an API that classifies disaster messages from a data set containing real messages that were sent during disaster events. The project creates a machine learning pipeline to categorize these events so that messages can be sent to an appropriate disaster relief agency. The project includes a web app not only displays visualizations of the data but also allows an emergency worker to input a new message and get classification results in several categories. 
+
+
+## Project Instructions
+#### 1. Clone Project and Install requirements 
+
+#### 2. Run the following commands in the project's root directory to set up the database and model:
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
+#### 3. Run the following command in the app's directory to run your web app:
+    `python run.py`
+
+#### 4. Go to http://0.0.0.0:3001/
 
 
 ## Project Components
@@ -31,6 +48,7 @@ The flask web app:
 
 ## Structure of the Project
 
+```
 - app
 | - template
 | |- master.html  # main page of web app
@@ -48,3 +66,4 @@ The flask web app:
 |- classifier.pkl  # saved model 
 
 - README.md
+```
