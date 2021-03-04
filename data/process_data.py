@@ -74,6 +74,8 @@ def save_data(df, database_filename):
 
 
 def main():
+    """Main function to perform ETL pipeline."""
+    
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
