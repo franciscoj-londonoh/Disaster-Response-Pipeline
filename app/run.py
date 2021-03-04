@@ -47,6 +47,8 @@ class StartingVerbExtractor(BaseEstimator, TransformerMixin):
     """
     
     def starting_verb(self, text):
+        """Function to identify if the text starts with a verb."""
+        
         sentence_list = nltk.sent_tokenize(text)
         for sentence in sentence_list:
             pos_tags = nltk.pos_tag(tokenize(sentence))
@@ -59,9 +61,11 @@ class StartingVerbExtractor(BaseEstimator, TransformerMixin):
         return 0
     
     def fit(self, x, y=None):
+        """Fit"""
         return self
 
     def transform(self, X):
+        """Transform"""
         X_tagged = pd.Series(X).apply(self.starting_verb)
 
         return pd.DataFrame(X_tagged)
@@ -78,6 +82,7 @@ model = joblib.load("../models/classifier.pkl")
 @app.route('/')
 @app.route('/index')
 def index():
+    """Index function to generate visualizations."""
     
     # extract data needed for visuals
     genre_counts = df.groupby('genre').count()['message']
@@ -140,6 +145,8 @@ def index():
 # web page that handles user query and displays model results
 @app.route('/go')
 def go():
+    """Call the go file."""
+    
     # save user input in query
     query = request.args.get('query', '') 
 
@@ -156,6 +163,8 @@ def go():
 
 
 def main():
+     """Main function to activate WebApp."""
+        
     app.run(host='0.0.0.0', port=3001, debug=True)
 
 
